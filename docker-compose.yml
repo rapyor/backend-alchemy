@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres
+    container_name: alchemy_postgres
+    environment:
+      POSTGRES_USER: alch
+      POSTGRES_PASSWORD: alchemist
+      POSTGRES_DB: alchemy_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U alch -d alchemy_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  postgres_data:

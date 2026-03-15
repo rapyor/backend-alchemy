@@ -1,4 +1,3 @@
-
 import uuid
 from datetime import datetime
 from typing import Literal
@@ -6,7 +5,6 @@ from sqlalchemy import UUID, String, DateTime, Boolean, func, ForeignKey, Unique
 from sqlalchemy.orm import Mapped, mapped_column
 
 from models.base import Base
-
 
 Provider = Literal["google"]
 

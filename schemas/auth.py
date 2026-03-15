@@ -24,7 +24,7 @@ class LoginRequest(BaseModel):
     @model_validator(mode="after")
     def either_email_or_username(self) -> Self:
         if not self.username and not self.email:
-            raise ValueError("Provider at least email or username")
+            raise ValueError("Provide at least email or username")
         return self
 
 class TokenResponse(BaseModel):

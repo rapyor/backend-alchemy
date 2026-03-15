@@ -1,3 +1,5 @@
 .env
 __pycache__/, *.pyc, *.pyo, and *.pyd
 .backend-alchemy
+CLAUDE.md
+**/__pycache__/
